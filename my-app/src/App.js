@@ -1,26 +1,29 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import lottie from "lottie-web";
+import reactLogo from "./lotties/typing.json";
 
-function App() {
+const classLetti = {
+  width: 200,
+  height: 200,
+  overflow: "hidden",
+};
+
+const flex = {
+  display: "flex",
+  justifyContent: "center",
+};
+
+export default function App() {
+  React.useEffect(() => {
+    lottie.loadAnimation({
+      container: document.querySelector("#react-logo"),
+      animationData: reactLogo,
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <div>wefiuhewfuijn</div>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={flex}>
+      <div id="react-logo" style={classLetti} />
     </div>
   );
 }
-
-export default App;
