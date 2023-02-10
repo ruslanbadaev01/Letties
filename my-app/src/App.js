@@ -5,6 +5,7 @@ import reactLogo from "./lotties/typing.json";
 const classLetti = {
   width: 200,
   height: 200,
+  marginTop: 100,
   overflow: "hidden",
 };
 
